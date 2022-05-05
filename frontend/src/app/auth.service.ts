@@ -11,7 +11,7 @@ import { User } from './user'
   providedIn: 'root'
 })
 export class AuthService {
-  API_URL: string =  'http://localhost:5000/api';
+  API_URL: string =  'https://angular-authi-app.herokuapp.com/api';
   headers =  new HttpHeaders().set('Content-type', 'application/json');
   currentUser = {}
   constructor( private httpClient: HttpClient, private router:Router) { }

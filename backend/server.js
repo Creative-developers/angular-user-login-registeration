@@ -32,7 +32,7 @@ app.use(bodyParser.json())
 
 
 app.use(cors({
-    origin: 'http://localhost:4200'
+    origin: 'https://angular6-user-login.netlify.app'
 }))
 
 /**
