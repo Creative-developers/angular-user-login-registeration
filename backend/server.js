@@ -21,6 +21,9 @@ connectDB()
 
 const app = express();
 const server = http.createServer(app);
+
+const PORT =  5000;
+
 /**
  * Parse incoming requests
  */
@@ -40,6 +43,6 @@ app.use('/api/users', users)
 app.use('/api/auth', auth)
 
 
-server.listen(process.env.PORT || 5000, () => {
+server.listen(PORT, () => {
     console.log(`listening on port ${process.env.PORT}`);
 });
