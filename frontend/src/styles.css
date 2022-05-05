@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+.user-form{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+p{
+    margin:0;
+    padding:0;
+}
+.alert p {margin:0 !important}

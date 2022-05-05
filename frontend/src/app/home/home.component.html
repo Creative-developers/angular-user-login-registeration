@@ -1,0 +1,8 @@
+<section class="user-profile">
+    <div class="container-fluid vh-100">
+        <div class="vh-100 d-flex align-items-center justify-content-center flex-column">
+            <p *ngIf="currentUser._id ">Welcome <strong>{{currentUser.username}}</strong></p>
+            <button type="button" (click)="logout()" class="btn btn-info" style="color:#fff">logout</button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,33 @@
+<section class="user-form">
+    <div class="row">
+        <div class="col-12 d-flex align-items-center justify-content-center">
+
+            <div class="col-md-12">
+                <p class="mb-3">Login into the dashboard.</p>
+                <div class="card p-3">
+                    <form [formGroup]="loginUserForm" (ngSubmit)="onSubmit()">
+                        <div [innerHtml]="errorMessage"></div>
+                        <div class="form-group">
+                            <label for="email">Username or Email Address</label>
+                            <input type="text" class="form-control" formControlName="username" placeholder="Username or Email Address" id="userLogin" [ngClass]="{'is-invalid' : isSubmitted && f.username.errors}" />
+                            <div *ngIf="isSubmitted && f.username.errors" class="invalid-feedback">
+                                <div *ngIf="f.username.errors.required">Username or Email Address field is required</div>
+                                <div *ngIf="f.username.errors.minlength">Username or Email Address should be atleast 4 characters</div>
+                            </div>
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" formControlName="password" placeholder="Your Password" id="password" [ngClass]="{'is-invalid' : isSubmitted && f.password.errors}" />
+                            <div *ngIf="isSubmitted && f.password.errors" class="invalid-feedback">
+                                <div *ngIf="f.password.errors.required">Password is required</div>
+                                <div *ngIf="f.password.errors.minlength">Password must be at least 5 characters</div>
+                            </div>
+                        </div>
+                        <button [disabled]="loading" type="submit" class="mt-2 btn btn-primary btn-block">Login</button>
+                    </form>
+                    <p class="mt-2">Create a new Account? <a routerLink="/register">Register</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
